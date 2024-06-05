@@ -1,0 +1,88 @@
+\doxysection{base\+\_\+class\+\_\+post.\+base\+\_\+post Class Reference}
+\hypertarget{classbase__class__post_1_1base__post}{}\label{classbase__class__post_1_1base__post}\index{base\_class\_post.base\_post@{base\_class\_post.base\_post}}
+
+
+Base\+\_\+post is a Python base class, that inherits from the Post\+Processor class.  
+
+
+Inheritance diagram for base\+\_\+class\+\_\+post.\+base\+\_\+post\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.962617cm]{classbase__class__post_1_1base__post}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbase__class__post_1_1base__post_ab2c3c2ccd88fb45552764594551ece23}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, job)
+\begin{DoxyCompactList}\small\item\em Init this class. \end{DoxyCompactList}\item 
+\Hypertarget{classbase__class__post_1_1base__post_a71a870a35ed768c22c735475160dac39}\label{classbase__class__post_1_1base__post_a71a870a35ed768c22c735475160dac39} 
+{\bfseries print\+\_\+values} (self)
+\item 
+\Hypertarget{classbase__class__post_1_1base__post_aca3523cbe291cf472f2badd4fa59b92c}\label{classbase__class__post_1_1base__post_aca3523cbe291cf472f2badd4fa59b92c} 
+{\bfseries export} (self)
+\begin{DoxyCompactList}\small\item\em The export routine actually writes the file(s) to be sent to the CNC machine. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classbase__class__post_1_1base__post_ad6f30c3cfff4ef2f0742537b6fbc51ff}{tooltip}} (self)
+\begin{DoxyCompactList}\small\item\em This is a generic post processor. \end{DoxyCompactList}\item 
+\Hypertarget{classbase__class__post_1_1base__post_a84a834374424f3c9f5acc7a916f7e57b}\label{classbase__class__post_1_1base__post_a84a834374424f3c9f5acc7a916f7e57b} 
+{\bfseries tooltip\+Args} (self)
+\item 
+\Hypertarget{classbase__class__post_1_1base__post_af92f83fdd64c37db7916352f528753b7}\label{classbase__class__post_1_1base__post_af92f83fdd64c37db7916352f528753b7} 
+{\bfseries units} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classbase__class__post_1_1base__post_a0ea7c45b0028bf1f55fd468e9bc23828}\label{classbase__class__post_1_1base__post_a0ea7c45b0028bf1f55fd468e9bc23828} 
+{\bfseries Values}
+\item 
+\Hypertarget{classbase__class__post_1_1base__post_a69890f5b3ec452755ab391ee6131a8f8}\label{classbase__class__post_1_1base__post_a69890f5b3ec452755ab391ee6131a8f8} 
+{\bfseries parser}
+\item 
+\Hypertarget{classbase__class__post_1_1base__post_a6f8926bfda6da060ba26aedc6295cb58}\label{classbase__class__post_1_1base__post_a6f8926bfda6da060ba26aedc6295cb58} 
+{\bfseries args}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base\+\_\+post is a Python base class, that inherits from the Post\+Processor class. 
+
+It will house the most generic operations over all the post processors\hypertarget{classbase__class__post_1_1base__post_autotoc_md0}{}\doxysubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{classbase__class__post_1_1base__post_autotoc_md0}
+This is a place holder. Format similar to\+:
+
+u\+: Base.\+Vector or Working\+Plane.\+Plane\+Base, optional Defaults to Vector(1, 0, 0). If a WP is provided\+: A copy of the WP is created, all other parameters are then ignored. If a vector is provided\+: Unit vector for the {\ttfamily u} attribute (+X axis). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classbase__class__post_1_1base__post_ab2c3c2ccd88fb45552764594551ece23}\index{base\_class\_post.base\_post@{base\_class\_post.base\_post}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!base\_class\_post.base\_post@{base\_class\_post.base\_post}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classbase__class__post_1_1base__post_ab2c3c2ccd88fb45552764594551ece23} 
+base\+\_\+class\+\_\+post.\+base\+\_\+post.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{job}{}\end{DoxyParamCaption})}
+
+
+
+Init this class. 
+
+\hypertarget{classmasso__class__post_1_1masso__post_autotoc_md1}{}\doxysubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{classmasso__class__post_1_1masso__post_autotoc_md1}
+job\+: This is a job object passed to the post processor 
+
+Reimplemented in \mbox{\hyperlink{classgrbl__class__post_1_1grbl__post_a31944f7ee6c389fd4af9c26edd640992}{grbl\+\_\+class\+\_\+post.\+grbl\+\_\+post}}, \mbox{\hyperlink{classlinuxcnc__class__post_1_1linuxcnc__post_aeeee0290848d1c223eda63975a9f9a0b}{linuxcnc\+\_\+class\+\_\+post.\+linuxcnc\+\_\+post}}, \mbox{\hyperlink{classmach__class__post_1_1mach__post_a721cb789c21245812d12aca25b088618}{mach\+\_\+class\+\_\+post.\+mach\+\_\+post}}, and \mbox{\hyperlink{classmasso__class__post_1_1masso__post_a9c20fd56403b82f8867a9f711be06d41}{masso\+\_\+class\+\_\+post.\+masso\+\_\+post}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classbase__class__post_1_1base__post_ad6f30c3cfff4ef2f0742537b6fbc51ff}\index{base\_class\_post.base\_post@{base\_class\_post.base\_post}!tooltip@{tooltip}}
+\index{tooltip@{tooltip}!base\_class\_post.base\_post@{base\_class\_post.base\_post}}
+\doxysubsubsection{\texorpdfstring{tooltip()}{tooltip()}}
+{\footnotesize\ttfamily \label{classbase__class__post_1_1base__post_ad6f30c3cfff4ef2f0742537b6fbc51ff} 
+base\+\_\+class\+\_\+post.\+base\+\_\+post.\+tooltip (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+This is a generic post processor. 
+
+It doesn\textquotesingle{}t do anything yet because we haven\textquotesingle{}t implemented it. Implementing it would be a good idea 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+base\+\_\+class\+\_\+post.\+py\end{DoxyCompactItemize}
