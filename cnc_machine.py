@@ -31,6 +31,13 @@ from typing import Any, Dict, Union
 
 import os
 from Path.Post.Processor import PostProcessor
+from cnc_controller import cnc_controller
+
+from linuxcnc_controller import linuxcnc_controller
+from masso_controller import masso_controller
+from grbl_controller import grbl_controller 
+from mach_controller import mach_controller
+
 import Path
 import FreeCAD
 
@@ -46,24 +53,23 @@ else:
     Path.Log.setLevel(Path.Log.Level.INFO, Path.Log.thisModule())
 
 
-## Base_post is a Python base class, that inherits from the PostProcessor class.
+## Cnc_machine is a Python base class.
 #
-#    It will house the most generic operations over all the post processors
+#    It will contain information about the selected machine.
 #
-#    Parameters
-#    ----------
+#    A "cnc_machine" will have one and only one "cnc_controller".
 #
-#    This is a place holder. Format similar to:
+#    A machine object stores all of it parameters in a python dictionary called "values"
+#    
 #
-#    u: Base.Vector or WorkingPlane.PlaneBase, optional
-#        Defaults to Vector(1, 0, 0).
-#        If a WP is provided:
-#            A copy of the WP is created, all other parameters are then ignored.
-#        If a vector is provided:
-#            Unit vector for the `u` attribute (+X axis).
-#
+#   | Value Name           |  Default        |   Description                                   |
+#   |:---------------------|:----------------|:------------------------------------------------|
+#   |VENDOR                |"Undefined"      |Manufacturer of the machine i.e. Haas, Fanuc etc |
+#   |TYPE                  |"Undefined"      |Mill, Lathe etc                                  |
+#   |MODEL                 |"Undefined"      |Model of the machine                             |
+#   |VERSION               |"Undefined"      |Version of the machine                           |
         
-class base_post(PostProcessor):
+class cnc_machine(PostProcessor):
  
     
 
@@ -82,6 +88,7 @@ class base_post(PostProcessor):
             units="kg",
         )
         
+        self.controller =masso_controller(PostProcessor)                         #create and assign a cnc_controller
         self.Values = {}  # Initialize the dictionary
 
         # Initialize the parser
@@ -103,17 +110,19 @@ class base_post(PostProcessor):
         #   POSTPROCESSOR_FILE_NAME
         #   UNITS
 
-        self.Values["ENABLE_COOLANT"] = "Undefined"
-        self.Values['MACHINE_NAME'] = "Undefined"
-        self.Values["POSTAMBLE"] = "Undefined"
-        self.Values["PREAMBLE"] = "Undefined"  
-        self.Values["POSTPROCESSOR_FILE_NAME"] = "Undefined"
-        self.Values["UNITS"] = "Undefined"
+
+# These globals set common customization preferences
+        self.Values["VENDOR"] = "Undefined"
+        self.Values["TYPE"] = "Undefined"             # Mill, Lathe etc
+        self.Values["MODEL"] = "Undefined"
+        self.Values["VERSION"] = "Undefined"
+
         #Values[""] = "Undefined"
 
+        print("CNC_MACHIBE initialized")
         print(self.Values)
-        print("Base_post post processor initialized")
-        Path.Log.debug("Base_post post processor initialized")
+        print("CNC_MACHIBE initialized end printout")
+        #Path.Log.debug("Base_post post processor initialized")
         print("\n\n")
 
 

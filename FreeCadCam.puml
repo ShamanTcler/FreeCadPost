@@ -1,0 +1,118 @@
+ @startuml
+
+
+
+enum MachineType {
+ThreeAxis
+FiveAxis
+Lathe
+}
+
+ enum FixtureType {
+ vise
+ softjaw
+ pallet
+ }
+
+
+ class Guid{
+  // unique identifier
+ }
+
+class Machine
+{
+  id:: Guid;
+  manufacturer:: string ;
+  model:: string;
+  version:: string;
+  type:: MachineType;
+  description:: string;
+  workEnvelope:: BoundingBox;
+  extents :: BoundingBox;
+  Controller acontroller;
+  solidRep :: CadModel;
+}
+
+note right of Machine
+  A specific mmachine i.e.
+  Machine #2, Haas VF-2,
+  10 rpm spindle,high pressure coolant 
+end note
+
+Machine *-- Controller: has 1
+Machine *-- ToolRack: has 0..1
+Machine *-- Fixture: has N
+MachineLibrary *-- Machine: has N
+ToolRack *-- Tool: has N
+
+
+
+
+class Controller
+{
+  id:: Guid;
+  manufacturer:: string;
+  model:: string;
+  version:: string;
+  description:: string;
+  validGcodes:: List<string>;
+  validMcodes:: List<string>;
+}
+
+class Masso{}
+Controller --|> Masso
+
+class LinuxCNC{}
+Controller --|> LinuxCNC 
+class Grbl{}
+Controller --|> Grbl 
+class Mach3{}
+Controller --|>  Mach3 
+class Mach4{}
+Controller --|> Mach4 
+
+
+class Tool
+{ 
+  id:: Guid;
+  String name;
+    
+
+}
+
+
+class ToolRack
+{
+  id:: Guid;
+  Integer capacity;
+    
+
+}
+
+
+
+class Fixture
+{
+  id:: Guid;
+  description:: string;
+  type:: FixtureType;
+  extents :: BoundingBox;
+  solidRep :: CadModel;
+}
+
+
+
+
+class MachineLibrary
+{
+  id:: Guid;
+  availableMachines:: List<Machine>;
+  
+}
+
+note right of MachineLibrary
+  A list of available machines
+  in a shop.
+end note
+
+ @enduml

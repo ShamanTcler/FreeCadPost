@@ -24,15 +24,35 @@
 # ***************************************************************************
 
 
-from base_class_post import base_post
+from cnc_controller import cnc_controller
 
-class linuxcnc_post(base_post):
+class mach_controller(cnc_controller):
 
     def __init__(self, job):
         super().__init__(job)
-        self.Values["ENABLE_COOLANT"] = True
-    
-        # the order of parameters
+        # If this is set to True, then commands that are placed in
+        # comments that look like (MC_RUN_COMMAND: blah) will be output.
+        #
+        self.Values["ENABLE_MACHINE_SPECIFIC_COMMANDS"] = True
+        #
+        # Used in the argparser code as the "name" of the postprocessor program.
+        # This would normally show up in the usage message in the TOOLTIP_ARGS,
+        # but we are suppressing the usage message, so it doesn't show up after all.
+        #
+        self.Values["MACHINE_NAME"] = "Mach"
+        #
+        # Default to outputting Path labels at the beginning of each Path.
+        #
+        self.Values["OUTPUT_PATH_LABELS"] = True
+        #
+        # Default to not outputting M6 tool changes (comment it) as mach
+        # currently does not handle it
+        #
+        self.Values["OUTPUT_TOOL_CHANGE"] = False
+        #
+        # The order of the parameters.
+        # Arcs may only work on the XY plane (this needs to be verified).
+        #
         self.Values["PARAMETER_ORDER"] = [
             "X",
             "Y",
@@ -40,38 +60,42 @@ class linuxcnc_post(base_post):
             "A",
             "B",
             "C",
+            "U",
+            "V",
+            "W",
             "I",
             "J",
+            "K",
             "F",
             "S",
             "T",
             "Q",
             "R",
             "L",
-            "H",
-            "D",
             "P",
         ]
-        #
-        # Used in the argparser code as the "name" of the postprocessor program.
-        # This would normally show up in the usage message in the TOOLTIP_ARGS,
-        # but we are suppressing the usage message, so it doesn't show up after all.
-        #
-        self.Values["MACHINE_NAME"] = "LinuxCNC"
         #
         # Any commands in this value will be output as the last commands
         # in the G-code file.
         #
-        self.Values["POSTAMBLE"] = """M05
-           G17 G54 G90 G80 G40
-           M2"""
-    
+        self.Values[
+            "POSTAMBLE"
+        ] = """M5
+            G17 G90
+            M2"""
         self.Values["POSTPROCESSOR_FILE_NAME"] = __name__
-
         #
         # Any commands in this value will be output after the header and
         # safety block at the beginning of the G-code file.
         #
-        self.Values["PREAMBLE"] = """G17 G54 G40 G49 G80 G90"""
+        self.Values["PREAMBLE"] = """G17 G90"""
+        #
+        # Do not show the current machine units just before the PRE_OPERATION.
+        #
+        self.Values["SHOW_MACHINE_UNITS"] = False
         #self.Values["UNITS"] = UNITS
-
+        #
+        # Default to not outputting a G43 following tool changes
+        #
+        self.Values["USE_TLO"] = False
+    

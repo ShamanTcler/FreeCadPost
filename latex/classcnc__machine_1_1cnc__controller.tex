@@ -1,0 +1,84 @@
+\doxysection{cnc\+\_\+machine.\+cnc\+\_\+controller Class Reference}
+\hypertarget{classcnc__machine_1_1cnc__controller}{}\label{classcnc__machine_1_1cnc__controller}\index{cnc\_machine.cnc\_controller@{cnc\_machine.cnc\_controller}}
+
+
+Base\+\_\+post is a Python base class, that inherits from the Post\+Processor class.  
+
+
+Inheritance diagram for cnc\+\_\+machine.\+cnc\+\_\+controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcnc__machine_1_1cnc__controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcnc__machine_1_1cnc__controller_ac7c97be75b5a968d4693bb00c1cc47f0}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, job)
+\begin{DoxyCompactList}\small\item\em Init this class. \end{DoxyCompactList}\item 
+\Hypertarget{classcnc__machine_1_1cnc__controller_a8d480e281326969be684d5757e8ef58e}\label{classcnc__machine_1_1cnc__controller_a8d480e281326969be684d5757e8ef58e} 
+{\bfseries print\+\_\+values} (self)
+\item 
+\Hypertarget{classcnc__machine_1_1cnc__controller_a2f5d3e75e0fc17d03e2bc9278035612e}\label{classcnc__machine_1_1cnc__controller_a2f5d3e75e0fc17d03e2bc9278035612e} 
+{\bfseries export} (self)
+\begin{DoxyCompactList}\small\item\em The export routine actually writes the file(s) to be sent to the CNC machine. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcnc__machine_1_1cnc__controller_aac1778a859f3929340e8aa743110b783}{tooltip}} (self)
+\begin{DoxyCompactList}\small\item\em This is a generic post processor. \end{DoxyCompactList}\item 
+\Hypertarget{classcnc__machine_1_1cnc__controller_abe47be1b7c89d3d9b369a6354272985a}\label{classcnc__machine_1_1cnc__controller_abe47be1b7c89d3d9b369a6354272985a} 
+{\bfseries tooltip\+Args} (self)
+\item 
+\Hypertarget{classcnc__machine_1_1cnc__controller_a2138c8413c02390853e3567d02fd2fa2}\label{classcnc__machine_1_1cnc__controller_a2138c8413c02390853e3567d02fd2fa2} 
+{\bfseries units} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcnc__machine_1_1cnc__controller_ab5f8d7d1f15aedd1704444ddd2e819b9}\label{classcnc__machine_1_1cnc__controller_ab5f8d7d1f15aedd1704444ddd2e819b9} 
+{\bfseries Values}
+\item 
+\Hypertarget{classcnc__machine_1_1cnc__controller_ac549393e26d526e4008e8a6fc5e48ee3}\label{classcnc__machine_1_1cnc__controller_ac549393e26d526e4008e8a6fc5e48ee3} 
+{\bfseries parser}
+\item 
+\Hypertarget{classcnc__machine_1_1cnc__controller_a0bb12a9257d1a11e0a25bc0a2a2f9f7f}\label{classcnc__machine_1_1cnc__controller_a0bb12a9257d1a11e0a25bc0a2a2f9f7f} 
+{\bfseries args}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base\+\_\+post is a Python base class, that inherits from the Post\+Processor class. 
+
+It will house the most generic operations over all the post processors\hypertarget{classcnc__machine_1_1cnc__controller_autotoc_md1}{}\doxysubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{classcnc__machine_1_1cnc__controller_autotoc_md1}
+This is a place holder. Format similar to\+:
+
+u\+: Base.\+Vector or Working\+Plane.\+Plane\+Base, optional Defaults to Vector(1, 0, 0). If a WP is provided\+: A copy of the WP is created, all other parameters are then ignored. If a vector is provided\+: Unit vector for the {\ttfamily u} attribute (+X axis). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcnc__machine_1_1cnc__controller_ac7c97be75b5a968d4693bb00c1cc47f0}\index{cnc\_machine.cnc\_controller@{cnc\_machine.cnc\_controller}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!cnc\_machine.cnc\_controller@{cnc\_machine.cnc\_controller}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classcnc__machine_1_1cnc__controller_ac7c97be75b5a968d4693bb00c1cc47f0} 
+cnc\+\_\+machine.\+cnc\+\_\+controller.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{job}{}\end{DoxyParamCaption})}
+
+
+
+Init this class. 
+
+\hypertarget{classcnc__machine_1_1cnc__controller_autotoc_md2}{}\doxysubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{classcnc__machine_1_1cnc__controller_autotoc_md2}
+job\+: This is a job object passed to the post processor 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcnc__machine_1_1cnc__controller_aac1778a859f3929340e8aa743110b783}\index{cnc\_machine.cnc\_controller@{cnc\_machine.cnc\_controller}!tooltip@{tooltip}}
+\index{tooltip@{tooltip}!cnc\_machine.cnc\_controller@{cnc\_machine.cnc\_controller}}
+\doxysubsubsection{\texorpdfstring{tooltip()}{tooltip()}}
+{\footnotesize\ttfamily \label{classcnc__machine_1_1cnc__controller_aac1778a859f3929340e8aa743110b783} 
+cnc\+\_\+machine.\+cnc\+\_\+controller.\+tooltip (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+This is a generic post processor. 
+
+It doesn\textquotesingle{}t do anything yet because we haven\textquotesingle{}t implemented it. Implementing it would be a good idea 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cnc\+\_\+machine.\+py\end{DoxyCompactItemize}

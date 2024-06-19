@@ -1,0 +1,641 @@
+<class 'App.Document'>
+test1
+<class 'list'>
+Object Name:  Body   | Object Label:  Body  | Object Type:  PartDesign::Body
+Object Name:  Origin   | Object Label:  Origin  | Object Type:  App::Origin
+Object Name:  X_Axis   | Object Label:  X-axis  | Object Type:  App::Line
+Object Name:  Y_Axis   | Object Label:  Y-axis  | Object Type:  App::Line
+Object Name:  Z_Axis   | Object Label:  Z-axis  | Object Type:  App::Line
+Object Name:  XY_Plane   | Object Label:  XY-plane  | Object Type:  App::Plane
+Object Name:  XZ_Plane   | Object Label:  XZ-plane  | Object Type:  App::Plane
+Object Name:  YZ_Plane   | Object Label:  YZ-plane  | Object Type:  App::Plane
+Object Name:  Sketch   | Object Label:  Sketch  | Object Type:  Sketcher::SketchObject
+Object Name:  Pad   | Object Label:  Pad  | Object Type:  PartDesign::Pad
+Object Name:  Job   | Object Label:  JobA  | Object Type:  Path::FeaturePython
+Object Name:  Operations   | Object Label:  Operations  | Object Type:  App::DocumentObjectGroup
+Object Name:  SetupSheet   | Object Label:  SetupSheet  | Object Type:  App::FeaturePython
+Object Name:  Model   | Object Label:  Model  | Object Type:  App::DocumentObjectGroup
+Object Name:  Clone   | Object Label:  Model-Body  | Object Type:  Part::FeaturePython
+Object Name:  Tools   | Object Label:  Tools  | Object Type:  App::DocumentObjectGroup
+Object Name:  __mm_Bull_Nose   | Object Label:  6 mm Bull Nose  | Object Type:  Part::FeaturePython
+Object Name:  TC__6_mm_Bull_Nose   | Object Label:  TC: 6 mm Bull Nose  | Object Type:  Path::FeaturePython
+Object Name:  Profile   | Object Label:  Profile  | Object Type:  Path::FeaturePython
+Object Name:  Job001   | Object Label:  JobB  | Object Type:  Path::FeaturePython
+Object Name:  Operations001   | Object Label:  Operations001  | Object Type:  App::DocumentObjectGroup
+Object Name:  SetupSheet001   | Object Label:  SetupSheet001  | Object Type:  App::FeaturePython
+Object Name:  Model001   | Object Label:  Model001  | Object Type:  App::DocumentObjectGroup
+Object Name:  Clone002   | Object Label:  Model-Body001  | Object Type:  Part::FeaturePython
+Object Name:  Tools001   | Object Label:  Tools001  | Object Type:  App::DocumentObjectGroup
+Object Name:  TC__Default_Tool   | Object Label:  TC: Default Tool  | Object Type:  Path::FeaturePython
+Object Name:  ToolBit   | Object Label:  Endmill  | Object Type:  Part::FeaturePython
+Object Name:  Stock   | Object Label:  Stock  | Object Type:  Part::FeaturePython
+Object Name:  Clone006   | Object Label:  Stock-Body  | Object Type:  Part::FeaturePython
+
+
+
+jobObjs:  [<Path::FeaturePython object>, <Path::FeaturePython object>]
+aJob.Label:  JobA
+<class 'FeaturePython'>
+['Content', 'CycleTime', 'Description', 'Document', 'ExpressionEngine', 'Fixtures', 'FullName', 'GeometryTolerance', 'Group', 'ID', 'InList', 'InListRecursive', 'JobType', 'Label', 'Label2', 'LastPostProcessDate', 'LastPostProcessOutput', 'MemSize', 'Model', 'Module', 'MustExecute', 'Name', 'NoTouch', 'OldLabel', 'Operations', 'OrderOutputBy', 'OutList', 'OutListRecursive', 'Parents', 'Path', 'Placement', 'PostProcessor', 'PostProcessorArgs', 'PostProcessorOutputFile', 'PropertiesList', 'Proxy', 'Removing', 'SetupSheet', 'SplitOutput', 'State', 'Stock', 'Tools', 'TypeId', 'ViewObject', 'Visibility', '_GroupTouched', '__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'addExtension', 'addObject', 'addObjects', 'addProperty', 'adjustRelativeLinks', 'clearExpression', 'dumpContent', 'dumpPropertyContent', 'enforceRecompute', 'evalExpression', 'getAllDerivedFrom', 'getDocumentationOfProperty', 'getEditorMode', 'getElementMapVersion', 'getEnumerationsOfProperty', 'getGroupOfProperty', 'getLinkedObject', 'getObject', 'getParent', 'getParentGeoFeatureGroup', 'getParentGroup', 'getPathsByOutList', 'getPropertyByName', 'getPropertyStatus', 'getPropertyTouchList', 'getStatusString', 'getSubObject', 'getSubObjectList', 'getSubObjects', 'getTypeIdOfProperty', 'getTypeOfProperty', 'hasChildElement', 'hasExtension', 'hasObject', 'isDerivedFrom', 'isElementVisible', 'isValid', 'newObject', 'purgeTouched', 'recompute', 'removeObject', 'removeObjects', 'removeObjectsFromDocument', 'removeProperty', 'resolve', 'resolveSubElement', 'restoreContent', 'restorePropertyContent', 'setDocumentationOfProperty', 'setEditorMode', 'setElementVisible', 'setExpression', 'setGroupOfProperty', 'setObjects', 'setPropertyStatus', 'supportedProperties', 'touch']
+
+
+
+--------------
+
+
+
+Attributes of a job:
+Content:      <Extensions Count="1">
+        <Extension type="App::GroupExtensionPython" name="GroupExtensionPython">
+        </Extension>
+    </Extensions>
+    <Properties Count="25" TransientCount="1">
+        <_Property name="_GroupTouched" type="App::PropertyBool" status="100663296"/>
+        <Property name="CycleTime" type="App::PropertyString" group="Path" doc="Job Cycle Time Estimation" attr="0" ro="0" hide="0" status="2097156">
+            <String value="00:00:07"/>
+        </Property>
+        <Property name="Description" type="App::PropertyString" group="Path" doc="An optional description for this job" attr="0" ro="0" hide="0" status="2097152">
+            <String value=""/>
+        </Property>
+        <Property name="ExpressionEngine" type="App::PropertyExpressionEngine" status="67108864">
+            <ExpressionEngine count="0">
+            </ExpressionEngine>
+        </Property>
+        <Property name="Fixtures" type="App::PropertyStringList" group="WCS" doc="The Work Coordinate Systems for the Job" attr="0" ro="0" hide="0" status="2097152">
+            <StringList count="4">
+                <String value="G54"/>
+                <String value="G55"/>
+                <String value="G56"/>
+                <String value="G57"/>
+            </StringList>
+        </Property>
+        <Property name="GeometryTolerance" type="App::PropertyDistance" group="Geometry" doc="For computing Paths; smaller increases accuracy, but slows down computation" attr="0" ro="0" hide="0" status="2097152">
+            <Float value="0.01016"/>
+        </Property>
+        <Property name="Group" type="App::PropertyLinkList">
+            <LinkList count="0">
+            </LinkList>
+        </Property>
+        <Property name="JobType" type="App::PropertyEnumeration" group="Base" doc="Select the Type of Job" attr="0" ro="0" hide="0" status="2097160">
+            <Integer value="0" CustomEnum="true"/>
+            <CustomEnumList count="4">
+                <Enum value="2D"/>
+                <Enum value="2.5D"/>
+                <Enum value="Lathe"/>
+                <Enum value="Multiaxis"/>
+            </CustomEnumList>
+        </Property>
+        <Property name="Label" type="App::PropertyString" status="134217728">
+            <String value="JobA"/>
+        </Property>
+        <Property name="Label2" type="App::PropertyString" status="67108992">
+            <String value=""/>
+        </Property>
+        <Property name="LastPostProcessDate" type="App::PropertyString" group="Output" doc="Last Time the Job was post processed" attr="0" ro="0" hide="0" status="2097160">
+            <String value=""/>
+        </Property>
+        <Property name="LastPostProcessOutput" type="App::PropertyString" group="Output" doc="Last Time the Job was post processed" attr="0" ro="0" hide="0" status="2097160">
+            <String value=""/>
+        </Property>
+        <Property name="Model" type="App::PropertyLink" group="Base" doc="The base objects for all operations" attr="0" ro="0" hide="0" status="2097152">
+            <Link value="Model"/>
+        </Property>
+        <Property name="Operations" type="App::PropertyLink" group="Base" doc="Compound path of all operations in the order they are processed." attr="0" ro="0" hide="0" status="2097160">
+            <Link value="Operations"/>
+        </Property>
+        <Property name="OrderOutputBy" type="App::PropertyEnumeration" group="WCS" doc="If multiple WCS, order the output this way" attr="0" ro="0" hide="0" status="2097152">
+            <Integer value="0" CustomEnum="true"/>
+            <CustomEnumList count="3">
+                <Enum value="Fixture"/>
+                <Enum value="Tool"/>
+                <Enum value="Operation"/>
+            </CustomEnumList>
+        </Property>
+        <Property name="Path" type="Path::PropertyPath">
+            <Path count="0" version="2">
+                <Center x="0" y="0" z="0"/>
+            </Path>
+        </Property>
+        <Property name="Placement" type="App::PropertyPlacement" status="8388616">
+            <PropertyPlacement Px="0" Py="0" Pz="0" Q0="0" Q1="0" Q2="0" Q3="1" A="0" Ox="0" Oy="0" Oz="1"/>
+        </Property>
+        <Property name="PostProcessor" type="App::PropertyEnumeration" group="Output" doc="Select the Post Processor" attr="0" ro="0" hide="0" status="2097152">
+            <Integer value="14" CustomEnum="true"/>
+            <CustomEnumList count="30">
+                <Enum value=""/>
+                <Enum value="KineticNCBeamicon2"/>
+                <Enum value="centroid"/>
+                <Enum value="comparams"/>
+                <Enum value="dxf"/>
+                <Enum value="dynapath"/>
+                <Enum value="estlcam"/>
+                <Enum value="fablin"/>
+                <Enum value="fangling"/>
+                <Enum value="fanuc"/>
+                <Enum value="generic"/>
+                <Enum value="grbl"/>
+                <Enum value="heidenhain"/>
+                <Enum value="jtech"/>
+                <Enum value="linuxcnc"/>
+                <Enum value="mach3_mach4"/>
+                <Enum value="marlin"/>
+                <Enum value="nccad"/>
+                <Enum value="opensbp"/>
+                <Enum value="philips"/>
+                <Enum value="refactored_centroid"/>
+                <Enum value="refactored_grbl"/>
+                <Enum value="refactored_linuxcnc"/>
+                <Enum value="refactored_mach3_mach4"/>
+                <Enum value="refactored_test"/>
+                <Enum value="rml"/>
+                <Enum value="rrf"/>
+                <Enum value="smoothie"/>
+                <Enum value="uccnc"/>
+                <Enum value="wedm"/>
+            </CustomEnumList>
+        </Property>
+        <Property name="PostProcessorArgs" type="App::PropertyString" group="Output" doc="Arguments for the Post Processor (specific to the script)" attr="0" ro="0" hide="0" status="2097152">
+            <String value=""/>
+        </Property>
+        <Property name="PostProcessorOutputFile" type="App::PropertyFile" group="Output" doc="The G-code output file for this project" attr="0" ro="0" hide="0" status="2097152">
+            <String value="%D%d%j_myOutput_%T"/>
+        </Property>
+        <Property name="Proxy" type="App::PropertyPythonObject">
+            <Python value="bnVsbA==" encoded="yes" module="Path.Main.Job" class="ObjectJob"/>
+        </Property>
+        <Property name="SetupSheet" type="App::PropertyLink" group="Base" doc="SetupSheet holding the settings for this job" attr="0" ro="0" hide="0" status="2097152">
+            <Link value="SetupSheet"/>
+        </Property>
+        <Property name="SplitOutput" type="App::PropertyBool" group="Output" doc="Split output into multiple G-code files" attr="0" ro="0" hide="0" status="2097152">
+            <Bool value="true"/>
+        </Property>
+        <Property name="Stock" type="App::PropertyLink" group="Base" doc="Solid object to be used as stock." attr="0" ro="0" hide="0" status="2097152">
+            <Link value="Clone006"/>
+        </Property>
+        <Property name="Tools" type="App::PropertyLink" group="Base" doc="Collection of all tool controllers for the job" attr="0" ro="0" hide="0" status="2097152">
+            <Link value="Tools"/>
+        </Property>
+        <Property name="Visibility" type="App::PropertyBool" status="648">
+            <Bool value="true"/>
+        </Property>
+    </Properties>
+
+CycleTime:  00:00:07
+Description:  
+Document:  <Document object at 0000020FE4B0EED0>
+ExpressionEngine:  []
+Fixtures:  ['G54', 'G55', 'G56', 'G57']
+FullName:  test1#Job
+GeometryTolerance:  0.01016 mm
+Group:  []
+ID:  2718
+InList:  []
+InListRecursive:  []
+Label:  JobA
+Label2:  
+LastPostProcessDate:  
+LastPostProcessOutput:  
+MemSize:  233
+Model:  <group object>
+MustExecute:  False
+Name:  Job
+NoTouch:  False
+OldLabel:  Unnamed
+Operations:  <group object>
+<class 'App.DocumentObjectGroup'>
+Operations as a class:  <class 'App.DocumentObjectGroup'>
+Operations as a name:  DocumentObjectGroup
+Operations as a bases:  (<class 'App.DocumentObject'>,)
+Operations as a mro:  (<class 'App.DocumentObjectGroup'>, <class 'App.DocumentObject'>, <class 'App.ExtensionContainer'>, <class 'App.PropertyContainer'>, <class 'Base.Persistence'>, <class 'Base.BaseClass'>, <class 'PyObjectBase'>, <class 'object'>)
+Operations as a dict  {'__new__': <built-in method __new__ of type object at 0x00007FF8F0F47E90>, '__repr__': <slot wrapper '__repr__' of 'App.DocumentObjectGroup' objects>, '__getattribute__': <slot wrapper '__getattribute__' of 'App.DocumentObjectGroup' objects>, '__setattr__': <slot wrapper '__setattr__' of 'App.DocumentObjectGroup' objects>, '__delattr__': <slot wrapper '__delattr__' of 'App.DocumentObjectGroup' objects>, '__init__': <slot wrapper '__init__' of 'App.DocumentObjectGroup' objects>, '__doc__': 'This class handles document objects in group', 'newObject': <built-in function newObject>, 'addObject': <built-in function addObject>, 'addObjects': <built-in function addObjects>, 'setObjects': <built-in function setObjects>, 'removeObject': <built-in function removeObject>, 'removeObjects': <built-in function removeObjects>, 'removeObjectsFromDocument': <built-in function removeObjectsFromDocument>, 'getObject': <built-in function getObject>, 'hasObject': <built-in function hasObject>}
+Operations as a module:  App
+Available methods for aJob.Operations:
+     addExtension
+     addObject
+     addObjects
+     addProperty
+     adjustRelativeLinks
+     clearExpression
+     dumpContent
+     dumpPropertyContent
+     enforceRecompute
+     evalExpression
+     getAllDerivedFrom
+     getDocumentationOfProperty
+     getEditorMode
+     getElementMapVersion
+     getEnumerationsOfProperty
+     getGroupOfProperty
+     getLinkedObject
+     getObject
+     getParent
+     getParentGeoFeatureGroup
+     getParentGroup
+     getPathsByOutList
+     getPropertyByName
+     getPropertyStatus
+     getPropertyTouchList
+     getStatusString
+     getSubObject
+     getSubObjectList
+     getSubObjects
+     getTypeIdOfProperty
+     getTypeOfProperty
+     hasChildElement
+     hasExtension
+     hasObject
+     isDerivedFrom
+     isElementVisible
+     isValid
+     newObject
+     purgeTouched
+     recompute
+     removeObject
+     removeObjects
+     removeObjectsFromDocument
+     removeProperty
+     resolve
+     resolveSubElement
+     restoreContent
+     restorePropertyContent
+     setDocumentationOfProperty
+     setEditorMode
+     setElementVisible
+     setExpression
+     setGroupOfProperty
+     setObjects
+     setPropertyStatus
+     supportedProperties
+     touch
+Available attributes for aJob.Operations:
+     Content
+     Document
+     ExpressionEngine
+     FullName
+     Group
+     ID
+     InList
+     InListRecursive
+     Label
+     Label2
+     MemSize
+     Module
+     MustExecute
+     Name
+     NoTouch
+     OldLabel
+     OutList
+     OutListRecursive
+     Parents
+     PropertiesList
+     Removing
+     State
+     TypeId
+     ViewObject
+     Visibility
+     _GroupTouched
+OutList:  [<Path::FeaturePython object>]
+OutList size:  1
+anOp:  <Path::FeaturePython object>
+Available attributes for aJob.Operations:
+     Content
+     Document
+     ExpressionEngine
+     FullName
+     Group
+     ID
+     InList
+     InListRecursive
+     Label
+     Label2
+     MemSize
+     Module
+     MustExecute
+     Name
+     NoTouch
+     OldLabel
+     OutList
+     OutListRecursive
+     Parents
+     PropertiesList
+     Removing
+     State
+     TypeId
+     ViewObject
+     Visibility
+     _GroupTouched
+Name Profile
+Parent:  <Path::FeaturePython object>
+++++++++++++++++++++++++++++++++++++++++++
+OrderOutputBy:  Fixture
+OutList:  [<group object>, <group object>, <App::FeaturePython object>, <Part::PartFeature>, <group object>]
+OutListRecursive:  [<body object>, <App::Origin object>, <group object>, <group object>, <group object>, <GeoFeature object>, <GeoFeature object>, <App::FeaturePython object>, <PartDesign::Pad>, <Part::PartFeature>, <GeoFeature object>, <GeoFeature object>, <GeoFeature object>, <Path::FeaturePython object>, <Path::FeaturePython object>, <Sketcher::SketchObject>, <Part::PartFeature>, <GeoFeature object>, <Part::PartFeature>]
+Parents:  []
+Path:  Path [ size:0 length:0 ]
+Placement:  Placement [Pos=(0,0,0), Yaw-Pitch-Roll=(0,0,0)]
+PostProcessor:  linuxcnc
+PostProcessorArgs:  
+PostProcessorOutputFile:  %D%d%j_myOutput_%T
+PropertiesList:  ['CycleTime', 'Description', 'ExpressionEngine', 'Fixtures', 'GeometryTolerance', 'Group', 'JobType', 'Label', 'Label2', 'LastPostProcessDate', 'LastPostProcessOutput', 'Model', 'Operations', 'OrderOutputBy', 'Path', 'Placement', 'PostProcessor', 'PostProcessorArgs', 'PostProcessorOutputFile', 'Proxy', 'SetupSheet', 'SplitOutput', 'Stock', 'Tools', 'Visibility', '_GroupTouched']
+Removing:  False
+SetupSheet:  <App::FeaturePython object>
+SetupSheet:  <App::FeaturePython object>
+SplitOutput:  True
+State:  ['Up-to-date']
+Stock:  <Part::PartFeature>
+Tools:  <group object>
+Type:  2D
+TypeId:  Path::FeaturePython
+
+
+
+-----------------
+
+
+aJob.Label:  JobB
+<class 'FeaturePython'>
+['Content', 'CycleTime', 'Description', 'Document', 'ExpressionEngine', 'Fixtures', 'FullName', 'GeometryTolerance', 'Group', 'ID', 'InList', 'InListRecursive', 'JobType', 'Label', 'Label2', 'LastPostProcessDate', 'LastPostProcessOutput', 'MemSize', 'Model', 'Module', 'MustExecute', 'Name', 'NoTouch', 'OldLabel', 'Operations', 'OrderOutputBy', 'OutList', 'OutListRecursive', 'Parents', 'Path', 'Placement', 'PostProcessor', 'PostProcessorArgs', 'PostProcessorOutputFile', 'PropertiesList', 'Proxy', 'Removing', 'SetupSheet', 'SplitOutput', 'State', 'Stock', 'Tools', 'TypeId', 'ViewObject', 'Visibility', '_GroupTouched', '__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'addExtension', 'addObject', 'addObjects', 'addProperty', 'adjustRelativeLinks', 'clearExpression', 'dumpContent', 'dumpPropertyContent', 'enforceRecompute', 'evalExpression', 'getAllDerivedFrom', 'getDocumentationOfProperty', 'getEditorMode', 'getElementMapVersion', 'getEnumerationsOfProperty', 'getGroupOfProperty', 'getLinkedObject', 'getObject', 'getParent', 'getParentGeoFeatureGroup', 'getParentGroup', 'getPathsByOutList', 'getPropertyByName', 'getPropertyStatus', 'getPropertyTouchList', 'getStatusString', 'getSubObject', 'getSubObjectList', 'getSubObjects', 'getTypeIdOfProperty', 'getTypeOfProperty', 'hasChildElement', 'hasExtension', 'hasObject', 'isDerivedFrom', 'isElementVisible', 'isValid', 'newObject', 'purgeTouched', 'recompute', 'removeObject', 'removeObjects', 'removeObjectsFromDocument', 'removeProperty', 'resolve', 'resolveSubElement', 'restoreContent', 'restorePropertyContent', 'setDocumentationOfProperty', 'setEditorMode', 'setElementVisible', 'setExpression', 'setGroupOfProperty', 'setObjects', 'setPropertyStatus', 'supportedProperties', 'touch']
+
+
+
+--------------
+
+
+
+Attributes of a job:
+Content:      <Extensions Count="1">
+        <Extension type="App::GroupExtensionPython" name="GroupExtensionPython">
+        </Extension>
+    </Extensions>
+    <Properties Count="25" TransientCount="1">
+        <_Property name="_GroupTouched" type="App::PropertyBool" status="100663296"/>
+        <Property name="CycleTime" type="App::PropertyString" group="Path" doc="Job Cycle Time Estimation" attr="0" ro="0" hide="0" status="2097156">
+            <String value="00:00:00"/>
+        </Property>
+        <Property name="Description" type="App::PropertyString" group="Path" doc="An optional description for this job" attr="0" ro="0" hide="0" status="2097152">
+            <String value=""/>
+        </Property>
+        <Property name="ExpressionEngine" type="App::PropertyExpressionEngine" status="67108864">
+            <ExpressionEngine count="0">
+            </ExpressionEngine>
+        </Property>
+        <Property name="Fixtures" type="App::PropertyStringList" group="WCS" doc="The Work Coordinate Systems for the Job" attr="0" ro="0" hide="0" status="2097152">
+            <StringList count="2">
+                <String value="G54"/>
+                <String value="G55"/>
+            </StringList>
+        </Property>
+        <Property name="GeometryTolerance" type="App::PropertyDistance" group="Geometry" doc="For computing Paths; smaller increases accuracy, but slows down computation" attr="0" ro="0" hide="0" status="2097152">
+            <Float value="0.01016"/>
+        </Property>
+        <Property name="Group" type="App::PropertyLinkList">
+            <LinkList count="0">
+            </LinkList>
+        </Property>
+        <Property name="JobType" type="App::PropertyEnumeration" group="Base" doc="Select the Type of Job" attr="0" ro="0" hide="0" status="2097160">
+            <Integer value="0" CustomEnum="true"/>
+            <CustomEnumList count="4">
+                <Enum value="2D"/>
+                <Enum value="2.5D"/>
+                <Enum value="Lathe"/>
+                <Enum value="Multiaxis"/>
+            </CustomEnumList>
+        </Property>
+        <Property name="Label" type="App::PropertyString" status="134217728">
+            <String value="JobB"/>
+        </Property>
+        <Property name="Label2" type="App::PropertyString" status="67108992">
+            <String value=""/>
+        </Property>
+        <Property name="LastPostProcessDate" type="App::PropertyString" group="Output" doc="Last Time the Job was post processed" attr="0" ro="0" hide="0" status="2097160">
+            <String value=""/>
+        </Property>
+        <Property name="LastPostProcessOutput" type="App::PropertyString" group="Output" doc="Last Time the Job was post processed" attr="0" ro="0" hide="0" status="2097160">
+            <String value=""/>
+        </Property>
+        <Property name="Model" type="App::PropertyLink" group="Base" doc="The base objects for all operations" attr="0" ro="0" hide="0" status="2097152">
+            <Link value="Model001"/>
+        </Property>
+        <Property name="Operations" type="App::PropertyLink" group="Base" doc="Compound path of all operations in the order they are processed." attr="0" ro="0" hide="0" status="2097160">
+            <Link value="Operations001"/>
+        </Property>
+        <Property name="OrderOutputBy" type="App::PropertyEnumeration" group="WCS" doc="If multiple WCS, order the output this way" attr="0" ro="0" hide="0" status="2097152">
+            <Integer value="0" CustomEnum="true"/>
+            <CustomEnumList count="3">
+                <Enum value="Fixture"/>
+                <Enum value="Tool"/>
+                <Enum value="Operation"/>
+            </CustomEnumList>
+        </Property>
+        <Property name="Path" type="Path::PropertyPath">
+            <Path count="0" version="2">
+                <Center x="0" y="0" z="0"/>
+            </Path>
+        </Property>
+        <Property name="Placement" type="App::PropertyPlacement" status="8388616">
+            <PropertyPlacement Px="0" Py="0" Pz="0" Q0="0" Q1="0" Q2="0" Q3="1" A="0" Ox="0" Oy="0" Oz="1"/>
+        </Property>
+        <Property name="PostProcessor" type="App::PropertyEnumeration" group="Output" doc="Select the Post Processor" attr="0" ro="0" hide="0" status="2097152">
+            <Integer value="1" CustomEnum="true"/>
+            <CustomEnumList count="30">
+                <Enum value=""/>
+                <Enum value="KineticNCBeamicon2"/>
+                <Enum value="centroid"/>
+                <Enum value="comparams"/>
+                <Enum value="dxf"/>
+                <Enum value="dynapath"/>
+                <Enum value="estlcam"/>
+                <Enum value="fablin"/>
+                <Enum value="fangling"/>
+                <Enum value="fanuc"/>
+                <Enum value="generic"/>
+                <Enum value="grbl"/>
+                <Enum value="heidenhain"/>
+                <Enum value="jtech"/>
+                <Enum value="linuxcnc"/>
+                <Enum value="mach3_mach4"/>
+                <Enum value="marlin"/>
+                <Enum value="nccad"/>
+                <Enum value="opensbp"/>
+                <Enum value="philips"/>
+                <Enum value="refactored_centroid"/>
+                <Enum value="refactored_grbl"/>
+                <Enum value="refactored_linuxcnc"/>
+                <Enum value="refactored_mach3_mach4"/>
+                <Enum value="refactored_test"/>
+                <Enum value="rml"/>
+                <Enum value="rrf"/>
+                <Enum value="smoothie"/>
+                <Enum value="uccnc"/>
+                <Enum value="wedm"/>
+            </CustomEnumList>
+        </Property>
+        <Property name="PostProcessorArgs" type="App::PropertyString" group="Output" doc="Arguments for the Post Processor (specific to the script)" attr="0" ro="0" hide="0" status="2097152">
+            <String value=""/>
+        </Property>
+        <Property name="PostProcessorOutputFile" type="App::PropertyFile" group="Output" doc="The G-code output file for this project" attr="0" ro="0" hide="0" status="2097152">
+            <String value=""/>
+        </Property>
+        <Property name="Proxy" type="App::PropertyPythonObject">
+            <Python value="bnVsbA==" encoded="yes" module="Path.Main.Job" class="ObjectJob"/>
+        </Property>
+        <Property name="SetupSheet" type="App::PropertyLink" group="Base" doc="SetupSheet holding the settings for this job" attr="0" ro="0" hide="0" status="2097152">
+            <Link value="SetupSheet001"/>
+        </Property>
+        <Property name="SplitOutput" type="App::PropertyBool" group="Output" doc="Split output into multiple G-code files" attr="0" ro="0" hide="0" status="2097152">
+            <Bool value="false"/>
+        </Property>
+        <Property name="Stock" type="App::PropertyLink" group="Base" doc="Solid object to be used as stock." attr="0" ro="0" hide="0" status="2097152">
+            <Link value="Stock"/>
+        </Property>
+        <Property name="Tools" type="App::PropertyLink" group="Base" doc="Collection of all tool controllers for the job" attr="0" ro="0" hide="0" status="2097152">
+            <Link value="Tools001"/>
+        </Property>
+        <Property name="Visibility" type="App::PropertyBool" status="648">
+            <Bool value="true"/>
+        </Property>
+    </Properties>
+
+CycleTime:  00:00:00
+Description:  
+Document:  <Document object at 0000020FE4B0EED0>
+ExpressionEngine:  []
+Fixtures:  ['G54', 'G55']
+FullName:  test1#Job001
+GeometryTolerance:  0.01016 mm
+Group:  []
+ID:  2754
+InList:  []
+InListRecursive:  []
+Label:  JobB
+Label2:  
+LastPostProcessDate:  
+LastPostProcessOutput:  
+MemSize:  209
+Model:  <group object>
+MustExecute:  False
+Name:  Job001
+NoTouch:  False
+OldLabel:  Unnamed
+Operations:  <group object>
+<class 'App.DocumentObjectGroup'>
+Operations as a class:  <class 'App.DocumentObjectGroup'>
+Operations as a name:  DocumentObjectGroup
+Operations as a bases:  (<class 'App.DocumentObject'>,)
+Operations as a mro:  (<class 'App.DocumentObjectGroup'>, <class 'App.DocumentObject'>, <class 'App.ExtensionContainer'>, <class 'App.PropertyContainer'>, <class 'Base.Persistence'>, <class 'Base.BaseClass'>, <class 'PyObjectBase'>, <class 'object'>)
+Operations as a dict  {'__new__': <built-in method __new__ of type object at 0x00007FF8F0F47E90>, '__repr__': <slot wrapper '__repr__' of 'App.DocumentObjectGroup' objects>, '__getattribute__': <slot wrapper '__getattribute__' of 'App.DocumentObjectGroup' objects>, '__setattr__': <slot wrapper '__setattr__' of 'App.DocumentObjectGroup' objects>, '__delattr__': <slot wrapper '__delattr__' of 'App.DocumentObjectGroup' objects>, '__init__': <slot wrapper '__init__' of 'App.DocumentObjectGroup' objects>, '__doc__': 'This class handles document objects in group', 'newObject': <built-in function newObject>, 'addObject': <built-in function addObject>, 'addObjects': <built-in function addObjects>, 'setObjects': <built-in function setObjects>, 'removeObject': <built-in function removeObject>, 'removeObjects': <built-in function removeObjects>, 'removeObjectsFromDocument': <built-in function removeObjectsFromDocument>, 'getObject': <built-in function getObject>, 'hasObject': <built-in function hasObject>}
+Operations as a module:  App
+Available methods for aJob.Operations:
+     addExtension
+     addObject
+     addObjects
+     addProperty
+     adjustRelativeLinks
+     clearExpression
+     dumpContent
+     dumpPropertyContent
+     enforceRecompute
+     evalExpression
+     getAllDerivedFrom
+     getDocumentationOfProperty
+     getEditorMode
+     getElementMapVersion
+     getEnumerationsOfProperty
+     getGroupOfProperty
+     getLinkedObject
+     getObject
+     getParent
+     getParentGeoFeatureGroup
+     getParentGroup
+     getPathsByOutList
+     getPropertyByName
+     getPropertyStatus
+     getPropertyTouchList
+     getStatusString
+     getSubObject
+     getSubObjectList
+     getSubObjects
+     getTypeIdOfProperty
+     getTypeOfProperty
+     hasChildElement
+     hasExtension
+     hasObject
+     isDerivedFrom
+     isElementVisible
+     isValid
+     newObject
+     purgeTouched
+     recompute
+     removeObject
+     removeObjects
+     removeObjectsFromDocument
+     removeProperty
+     resolve
+     resolveSubElement
+     restoreContent
+     restorePropertyContent
+     setDocumentationOfProperty
+     setEditorMode
+     setElementVisible
+     setExpression
+     setGroupOfProperty
+     setObjects
+     setPropertyStatus
+     supportedProperties
+     touch
+Available attributes for aJob.Operations:
+     Content
+     Document
+     ExpressionEngine
+     FullName
+     Group
+     ID
+     InList
+     InListRecursive
+     Label
+     Label2
+     MemSize
+     Module
+     MustExecute
+     Name
+     NoTouch
+     OldLabel
+     OutList
+     OutListRecursive
+     Parents
+     PropertiesList
+     Removing
+     State
+     TypeId
+     ViewObject
+     Visibility
+     _GroupTouched
+OutList:  []
+OutList size:  0
+Parent:  <Path::FeaturePython object>
+++++++++++++++++++++++++++++++++++++++++++
+OrderOutputBy:  Fixture
+OutList:  [<group object>, <group object>, <App::FeaturePython object>, <Part::PartFeature>, <group object>]
+OutListRecursive:  [<body object>, <App::Origin object>, <group object>, <group object>, <group object>, <GeoFeature object>, <GeoFeature object>, <PartDesign::Pad>, <GeoFeature object>, <GeoFeature object>, <GeoFeature object>, <Part::PartFeature>, <Sketcher::SketchObject>, <App::FeaturePython object>, <Part::PartFeature>, <Path::FeaturePython object>, <Part::PartFeature>, <GeoFeature object>]
+Parents:  []
+Path:  Path [ size:0 length:0 ]
+Placement:  Placement [Pos=(0,0,0), Yaw-Pitch-Roll=(0,0,0)]
+PostProcessor:  KineticNCBeamicon2
+PostProcessorArgs:  
+PostProcessorOutputFile:  
+PropertiesList:  ['CycleTime', 'Description', 'ExpressionEngine', 'Fixtures', 'GeometryTolerance', 'Group', 'JobType', 'Label', 'Label2', 'LastPostProcessDate', 'LastPostProcessOutput', 'Model', 'Operations', 'OrderOutputBy', 'Path', 'Placement', 'PostProcessor', 'PostProcessorArgs', 'PostProcessorOutputFile', 'Proxy', 'SetupSheet', 'SplitOutput', 'Stock', 'Tools', 'Visibility', '_GroupTouched']
+Removing:  False
+SetupSheet:  <App::FeaturePython object>
+SetupSheet:  <App::FeaturePython object>
+SplitOutput:  False
+State:  ['Up-to-date']
+Stock:  <Part::PartFeature>
+Tools:  <group object>
+Type:  2D
+TypeId:  Path::FeaturePython
+
+
+
+-----------------
+
+

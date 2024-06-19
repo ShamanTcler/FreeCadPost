@@ -24,9 +24,9 @@
 # ***************************************************************************
 
 
-from base_class_post import base_post
+from cnc_controller import cnc_controller
 
-class grbl_post(base_post):
+class masso_controller(cnc_controller):
 
     def __init__(self, job):
         super().__init__(job)
@@ -39,13 +39,13 @@ class grbl_post(base_post):
         # This would normally show up in the usage message in the TOOLTIP_ARGS,
         # but we are suppressing the usage message, so it doesn't show up after all.
         #
-        self.Values["MACHINE_NAME"] = "Grbl"
+        self.Values["MACHINE_NAME"] = "Masso"
         #
         # Default to outputting Path labels at the beginning of each Path.
         #
         self.Values["OUTPUT_PATH_LABELS"] = True
         #
-        # Default to not outputting M6 tool changes (comment it) as grbl
+        # Default to not outputting M6 tool changes (comment it) as Masso
         # currently does not handle it
         #
         self.Values["OUTPUT_TOOL_CHANGE"] = False

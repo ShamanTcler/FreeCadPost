@@ -1,0 +1,105 @@
+\doxysection{cnc\+\_\+machine.\+cnc\+\_\+machine Class Reference}
+\hypertarget{classcnc__machine_1_1cnc__machine}{}\label{classcnc__machine_1_1cnc__machine}\index{cnc\_machine.cnc\_machine@{cnc\_machine.cnc\_machine}}
+
+
+Cnc\+\_\+machine is a Python base class.  
+
+
+Inheritance diagram for cnc\+\_\+machine.\+cnc\+\_\+machine\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcnc__machine_1_1cnc__machine}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcnc__machine_1_1cnc__machine_af38274c300bdca2056c6d18843312af6}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, job)
+\begin{DoxyCompactList}\small\item\em Init this class. \end{DoxyCompactList}\item 
+\Hypertarget{classcnc__machine_1_1cnc__machine_af6691e8979fa4d07779ca81e63bf2b7a}\label{classcnc__machine_1_1cnc__machine_af6691e8979fa4d07779ca81e63bf2b7a} 
+{\bfseries print\+\_\+values} (self)
+\item 
+\Hypertarget{classcnc__machine_1_1cnc__machine_a1a2f36f6374918e2e4b029298fe7a995}\label{classcnc__machine_1_1cnc__machine_a1a2f36f6374918e2e4b029298fe7a995} 
+{\bfseries export} (self)
+\begin{DoxyCompactList}\small\item\em The export routine actually writes the file(s) to be sent to the CNC machine. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcnc__machine_1_1cnc__machine_a36b66374f1e950b7e2e6e033bed6e111}{tooltip}} (self)
+\begin{DoxyCompactList}\small\item\em This is a generic post processor. \end{DoxyCompactList}\item 
+\Hypertarget{classcnc__machine_1_1cnc__machine_aa732b5be1e59970976ffea3728b8dee4}\label{classcnc__machine_1_1cnc__machine_aa732b5be1e59970976ffea3728b8dee4} 
+{\bfseries tooltip\+Args} (self)
+\item 
+\Hypertarget{classcnc__machine_1_1cnc__machine_acb9e34982e70d3cd7c7f258dc20391e8}\label{classcnc__machine_1_1cnc__machine_acb9e34982e70d3cd7c7f258dc20391e8} 
+{\bfseries units} (self)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcnc__machine_1_1cnc__machine_a49011054c5c50ef2f4d5b411708b8af7}\label{classcnc__machine_1_1cnc__machine_a49011054c5c50ef2f4d5b411708b8af7} 
+{\bfseries controller}
+\item 
+\Hypertarget{classcnc__machine_1_1cnc__machine_a507873198a86d6d18cf90d302189e455}\label{classcnc__machine_1_1cnc__machine_a507873198a86d6d18cf90d302189e455} 
+{\bfseries Values}
+\item 
+\Hypertarget{classcnc__machine_1_1cnc__machine_a4a66c9c77348c2a9e7b24f31b2849000}\label{classcnc__machine_1_1cnc__machine_a4a66c9c77348c2a9e7b24f31b2849000} 
+{\bfseries parser}
+\item 
+\Hypertarget{classcnc__machine_1_1cnc__machine_ac761f264e49d825f825ea76a613d7901}\label{classcnc__machine_1_1cnc__machine_ac761f264e49d825f825ea76a613d7901} 
+{\bfseries args}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Cnc\+\_\+machine is a Python base class. 
+
+It will contain information about the selected machine.
+
+A "{}cnc\+\_\+machine"{} will have one and only one "{}cnc\+\_\+controller"{}.
+
+A machine object stores all of it parameters in a python dictionary called "{}values"{}
+
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{3}{|X[-1]}|}
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Value Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Default   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\cellcolor{\tableheadbgcolor}\textbf{ Value Name   }&\cellcolor{\tableheadbgcolor}\textbf{ Default   }&\cellcolor{\tableheadbgcolor}\textbf{ Description    }\\\cline{1-3}
+\endhead
+VENDOR   &"{}\+Undefined"{}   &Manufacturer of the machine i.\+e. Haas, Fanuc etc    \\\cline{1-3}
+TYPE   &"{}\+Undefined"{}   &Mill, Lathe etc    \\\cline{1-3}
+MODEL   &"{}\+Undefined"{}   &Model of the machine    \\\cline{1-3}
+VERSION   &"{}\+Undefined"{}   &Version of the machine   \\\cline{1-3}
+\end{longtabu}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcnc__machine_1_1cnc__machine_af38274c300bdca2056c6d18843312af6}\index{cnc\_machine.cnc\_machine@{cnc\_machine.cnc\_machine}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!cnc\_machine.cnc\_machine@{cnc\_machine.cnc\_machine}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily \label{classcnc__machine_1_1cnc__machine_af38274c300bdca2056c6d18843312af6} 
+cnc\+\_\+machine.\+cnc\+\_\+machine.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self}{, }\item[{}]{job}{}\end{DoxyParamCaption})}
+
+
+
+Init this class. 
+
+\hypertarget{classcnc__machine_1_1cnc__machine_autotoc_md1}{}\doxysubsubsection{\texorpdfstring{Parameters}{Parameters}}\label{classcnc__machine_1_1cnc__machine_autotoc_md1}
+job\+: This is a job object passed to the post processor 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcnc__machine_1_1cnc__machine_a36b66374f1e950b7e2e6e033bed6e111}\index{cnc\_machine.cnc\_machine@{cnc\_machine.cnc\_machine}!tooltip@{tooltip}}
+\index{tooltip@{tooltip}!cnc\_machine.cnc\_machine@{cnc\_machine.cnc\_machine}}
+\doxysubsubsection{\texorpdfstring{tooltip()}{tooltip()}}
+{\footnotesize\ttfamily \label{classcnc__machine_1_1cnc__machine_a36b66374f1e950b7e2e6e033bed6e111} 
+cnc\+\_\+machine.\+cnc\+\_\+machine.\+tooltip (\begin{DoxyParamCaption}\item[{}]{self}{}\end{DoxyParamCaption})}
+
+
+
+This is a generic post processor. 
+
+It doesn\textquotesingle{}t do anything yet because we haven\textquotesingle{}t implemented it. Implementing it would be a good idea 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+cnc\+\_\+machine.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,135 @@
+class CNC_Controller
+{
+  string manufacturer;
+  string model;
+  string version;
+  
+  1 -- 1 CNC_Machine;
+}
+
+class CNC_ToolRack
+{
+  
+  1 -- 1 CNC_Machine;
+}
+
+
+
+class CNC_Fixture
+{
+  * -- 1 CNC_Machine;
+}
+
+class CNC_Machine
+{
+  string name;
+  string manufacture;
+  CNC_Controller controller;
+}
+
+class CNC_Machine{
+  machineType{
+    Axis3{}
+    Axis5{}
+    Lathe{}
+  }
+}
+
+class Masso
+{
+  
+  isA CNC_Controller;
+}
+
+
+class LinuxCNC
+{
+  
+  isA CNC_Controller;
+}
+
+class Grbl
+{
+  
+  isA CNC_Controller;
+}
+
+class Mach3
+{
+  
+  isA CNC_Controller;
+}
+
+class Mach4
+{
+  
+  isA CNC_Controller;
+}
+
+class MachineLibrary
+{
+  1 -- * CNC_Machine;
+  
+}//$?[End_of_model]$?
+
+namespace -;
+
+
+class CNC_Controller
+{
+  position.association CNC_Controller__CNC_Machine 44,0 70,92;
+  position 248 321 163.993 95.5556;
+}
+
+class CNC_Controller
+{
+  position 248 321 163.993 95.5556;
+}
+
+class CNC_Fixture
+{
+  position 930 319 109 42.5868;
+  position.association CNC_Fixture__CNC_Machine 0,1 125,92;
+}
+
+class CNC_Machine
+{
+  position 450 139 201.528 95.5556;
+}
+
+class Masso
+{
+  position 0 501 109 42.5868;
+}
+
+class LinuxCNC
+{
+  position 131 504 109 42.5868;
+}
+
+class Grbl
+{
+  position 258 506 109 42.5868;
+}
+
+class Mach3
+{
+  position 531 503 109 42.5868;
+}
+
+class Mach4
+{
+  position 393 505 109 42.5868;
+}
+
+class MachineLibrary
+{
+  position 480 0 124.913 42.5868;
+  position.association CNC_Machine__MachineLibrary 59,43 19,0;
+}
+
+class CNC_ToolRack
+{
+  position 680 323 119.375 42.5868;
+  position.association CNC_Machine__CNC_ToolRack 109,0 99,92;
+}

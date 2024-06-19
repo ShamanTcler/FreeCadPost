@@ -1,0 +1,233 @@
+@startuml
+
+ enum MachineState { Available, OutOfService}
+ enum MachineType {ThreeAxis,FiveAxis,Lathe}
+ enum FixtureType {vise, softjaw, pallet }
+
+
+
+class Guid{
+  // unique identifier
+ }
+
+class CadModel{}
+class BoundingBox{}
+class SolidRep{}
+
+
+class Machine
+{
+  Guid id;
+  string manufacturer;
+  string model;
+  string version;
+  string description;
+  
+  MachineState state;
+  MachineType type ;
+  
+  
+  
+  BoundingBox workEnvelope;
+  BoundingBox extents;
+  Controller acontroller;
+  SolidRep cadModel;
+}
+
+
+
+
+class Controller
+{
+  Guid id ;
+  
+  defaulted string manufacturer = 'Undefined';
+  defaulted string model = 'Undefined';
+  defaulted string version = 'Undefined';
+  defaulted string description = 'Undefined';
+  
+  defaulted string units = 'Undefined';
+  
+  // number of decimals after 
+  defaulted Integer precision = 3;
+  
+  defaulted string unit_speed_format = 'Undefined';
+  
+  defaulted binary outputComments=False;
+  defaulted binary outputLineNnumbers = False;
+  // Starting line number
+  integer linenr; 
+  
+  string toolChange;
+  string enableCoolant;
+  
+  // if true G43 will be output following tool changes
+  binary useTLO;
+    
+  // if true commands are suppressed if the same as previous line.
+  string modal;  
+ 
+  defaulted string postamble = 'Undefined';
+  defaulted string preamble = 'Undefined';  
+  defaulted string postprocessor_file_name = 'Undefined';
+
+  defaulted string pre_operation = 'Undefined';
+  defaulted string post_operation = 'Undefined';
+  
+  defaulted string validGcodes = 'Undefined';
+  defaulted string validMcodes = 'Undefined';
+  
+   1 -- 1 Machine;
+}
+
+class Masso{
+   isA Controller;
+}
+
+
+class LinuxCNC{
+   isA Controller;
+}
+
+class Grbl{
+   isA Controller;
+}
+
+class Mach3{
+   isA Controller;
+}
+
+class Mach4{
+   isA Controller;
+}
+
+
+
+class Tool
+{ 
+  Guid id;
+  string name;
+    
+  1 -- * ToolRack;
+}
+
+
+class ToolRack
+{
+  Guid id;
+  integer capacity;
+    
+  1 -- 1 Machine;
+}
+
+
+
+class Fixture
+{
+  Guid id;
+  string description;
+  FixtureType type;
+  BoundingBox extents;
+  CadModel solidRep;
+  
+  * -- 1 Machine;
+}
+
+
+
+
+class MachineLibrary
+{
+  Guid id;
+  Machine availableMachines;
+  public void getMachineNames(){
+
+}
+1 -- * Machine;
+}
+
+
+ @enduml
+
+namespace -;
+
+
+class Guid
+{
+  position 50 30 109 45;
+}
+
+class CadModel
+{
+  position 50 130 109 45;
+}
+
+class BoundingBox
+{
+  position 50 230 109 45;
+}
+
+class SolidRep
+{
+  position 50 330 109 45;
+}
+
+class Machine
+{
+  position 836 196 216.646 229.521;
+}
+
+class Controller
+{
+  position 347 567 214.042 297.521;
+  position.association Controller__Machine 95,0 80,230;
+}
+
+class Masso
+{
+  position 109 964 109 42.5208;
+}
+
+class LinuxCNC
+{
+  position 544 963 109 42.5208;
+}
+
+class Grbl
+{
+  position 400 964 109 42.5208;
+}
+
+class Mach3
+{
+  position 251 966 109 42.5208;
+}
+
+class Mach4
+{
+  position 691 965 109 42.5208;
+}
+
+class Tool
+{
+  position 1135 732 111.438 76.5208;
+  position.association Tool__ToolRack 37,0 66,77;
+}
+
+class ToolRack
+{
+  position 1107 553 137.979 76.5208;
+  position.association Machine__ToolRack 113,0 111,230;
+}
+
+class Fixture
+{
+  position 1379 554 173.271 127.521;
+  position.association Fixture__Machine 34,0 210,166;
+}
+
+class MachineLibrary
+{
+  position 843 58 210.854 76.5208;
+  position.association Machine__MachineLibrary 108,77 116,0;
+}//$?[End_of_model]$?

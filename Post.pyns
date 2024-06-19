@@ -1,0 +1,16 @@
+# PynSource Version 1.2
+{'type':'meta', 'info1':'Lorem ipsum dolor sit amet, consectetur adipiscing elit is latin. Comments are saved.'}
+{'type':'umlshape', 'id':'cnc_controller', 'x':308, 'y':101, 'width':150, 'height':202, 'attrs': 'Values|args|parser|tooltip|tooltipArgs|units', 'meths': '__init__|export|print_values'}
+{'type':'umlshape', 'id':'PostProcessor', 'x':223, 'y':18, 'width':140, 'height':28, 'attrs': '', 'meths': ''}
+{'type':'umlshape', 'id':'argparse.ArgumentParser', 'x':18, 'y':278, 'width':240, 'height':28, 'attrs': '', 'meths': ''}
+{'type':'umlshape', 'id':'cnc_machine', 'x':10, 'y':10, 'width':120, 'height':218, 'attrs': 'Values|args|controller|parser|tooltip|tooltipArgs|units', 'meths': '__init__|export|print_values'}
+{'type':'umlshape', 'id':'grbl_controller', 'x':514, 'y':91, 'width':160, 'height':90, 'attrs': 'Values', 'meths': '__init__'}
+{'type':'umlshape', 'id':'linuxcnc_controller', 'x':228, 'y':353, 'width':200, 'height':90, 'attrs': 'Values', 'meths': '__init__'}
+{'type':'umlshape', 'id':'mach_controller', 'x':488, 'y':291, 'width':160, 'height':90, 'attrs': 'Values', 'meths': '__init__'}
+{'type':'edge', 'id':'cnc_controller_to_PostProcessor', 'source':'cnc_controller', 'target':'PostProcessor', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'argparse.ArgumentParser_to_cnc_controller', 'source':'argparse.ArgumentParser', 'target':'cnc_controller', 'uml_edge_type': 'composition'}
+{'type':'edge', 'id':'cnc_machine_to_PostProcessor', 'source':'cnc_machine', 'target':'PostProcessor', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'argparse.ArgumentParser_to_cnc_machine', 'source':'argparse.ArgumentParser', 'target':'cnc_machine', 'uml_edge_type': 'composition'}
+{'type':'edge', 'id':'grbl_controller_to_cnc_controller', 'source':'grbl_controller', 'target':'cnc_controller', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'linuxcnc_controller_to_cnc_controller', 'source':'linuxcnc_controller', 'target':'cnc_controller', 'uml_edge_type': 'generalisation'}
+{'type':'edge', 'id':'mach_controller_to_cnc_controller', 'source':'mach_controller', 'target':'cnc_controller', 'uml_edge_type': 'generalisation'}
