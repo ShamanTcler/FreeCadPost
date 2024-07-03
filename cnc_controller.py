@@ -130,6 +130,8 @@ class cnc_controller(PostProcessor):
 
 
 # These globals set common customization preferences
+
+
         self.Values["OUTPUT_COMMENTS"] = "True"
         self.ValuesDefinitions[""] = "Unknown"
 
@@ -137,6 +139,11 @@ class cnc_controller(PostProcessor):
         self.ValuesDefinitions["OUTPUT_HEADER"] = "Unknown"
         self.Values["OUTPUT_LINE_NUMBERS"] = "False"
         self.ValuesDefinitions["OUTPUT_LINE_NUMBERS"] = "Unknown"
+
+        # the order of parameters                                  
+        self.Values["PARAMETER_ORDER"] = ["Undefined"]
+        self.ValuesDefinitions["PARAMETER_ORDER"]= "the order of parameters"
+
         self.Values["SHOW_EDITOR"] = "True"
         self.ValuesDefinitions["SHOW_EDITOR"] = "Unknown"
 
@@ -171,8 +178,10 @@ class cnc_controller(PostProcessor):
 
         self.Values["UNITS"] = "Undefined"
         self.ValuesDefinitions["UNITS"] = "Unknown"
+
         self.Values["UNIT_SPEED_FORMAT"] = "Undefined"
         self.ValuesDefinitions["UNIT_SPEED_FORMAT"] = "Unknown"
+
         self.Values["UNIT_FORMAT"] = "Undefined"
         self.ValuesDefinitions["UNIT_FORMAT"] = "Unknown"
         
@@ -182,17 +191,34 @@ class cnc_controller(PostProcessor):
         self.ValuesDefinitions["ENABLE_COOLANT"] = "Unknown"
         
 
+
+#
+        # Used in the argparser code as the "name" of the postprocessor program.
+        self.Values["MACHINE_NAME"] = "Unknown"
+        self.ValuesDefinitions["MACHINE_NAME"] = "Used in the argparser code as the \"name\" of the postprocessor program."
+
+
         self.Values['MODEL'] = "Undefined"
         self.ValuesDefinitions["MODEL"] = "Unknown"
+
         self.Values['MANUFACTURER'] = "Undefined"
         self.ValuesDefinitions["MANUFACTURER"] = "Unknown"
         
+        # Any commands in this value will be output as the last commands
+        # in the G-code file.
         self.Values["POSTAMBLE"] = "Undefined"
-        self.ValuesDefinitions["POSTAMBLE"] = "Unknown"
+        self.ValuesDefinitions["POSTAMBLE"] = "Any commands in this value will be output as the last commands in the G-code file."
+
+
+        # Any commands in this value will be output after the header and
+        # safety block at the beginning of the G-code file.
         self.Values["PREAMBLE"] = "Undefined"  
-        self.ValuesDefinitions["PREAMBLE"] = "Unknown"
+        self.ValuesDefinitions["PREAMBLE"] = "Commands in this value will be output after the header and safety block at the beginning of the G-code file."
+        
+
+        # The name of the file to be written by the post processor.
         self.Values["POSTPROCESSOR_FILE_NAME"] = "Undefined"
-        self.ValuesDefinitions["POSTPROCESSOR_FILE_NAME"] = "Unknown"
+        self.ValuesDefinitions["POSTPROCESSOR_FILE_NAME"] = "The name of the file to be written by the post processor."
 
         #self.Values["PRE_OPERATION"] = "Undefined"
         #self.Values["POST_OPERATION"] = "Undefined"
