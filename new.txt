@@ -1,0 +1,12 @@
+I am looking for “CAM” objects such as tool controller in a file (
+
+, I walk the object tree from 
+
+doc=FreeCAD.open(filepath)
+
+for obj in doc.Objects
+      if obj.TypeId == 'Path::FeaturePython':
+      
+
+
+
