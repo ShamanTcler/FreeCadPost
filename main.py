@@ -65,7 +65,7 @@ doc=FreeCAD.open(filepath)
 print(type(doc))
 print("Doc Label:",doc.Label)
 
-print("These are global app settings:")
+print("\n\n\nThese are global app settings:")
 print("\t- Available lib paths for tools",JobUtils._get_available_tool_library_paths())
 
 
@@ -73,12 +73,18 @@ print("\t- Available lib paths for tools",JobUtils._get_available_tool_library_p
 toolDirs=JobUtils._get_available_tool_library_paths()
 print("\t- toolDirs[0][2]", toolDirs[0][2])
 toolList=JobUtils._read_library(toolDirs[0][2])
+
+print("\n")
 print ("\t- toolList: ")
 for aTool in toolList:
     print("\t\t:",aTool)
 
 
-print("\n\n()()()()()())()()()()()()\n\n")
+print("Done with tools\n\n\n\n")
+
+
+print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+print("Walking the CAM details\n")
 
 docObjs=doc.Objects
 #print(type(docObjs))
@@ -88,9 +94,10 @@ opArray=[]
 toolArray=[]
 jobArray=[]
 
+
 print("Parsing out CAM objects:")
 for obj in docObjs:
-
+    
     match obj.TypeId:
 
         case "App::FeaturePython":
@@ -145,55 +152,139 @@ print("\ttoolArray size: ",len(toolArray))
 print("\topArray size: ",len(opArray))
 
 
+
 if len(jobArray) > 0:
-    print("\n\nPrinting JobArray[0]:")
-    #print(dir(jobArray[0]))
-    print("\tLabel:",jobArray[0].Label)
-    print("\tFixtures:",jobArray[0].Fixtures)
-    print("\tPostProcessor:",jobArray[0].PostProcessor)
-    print("\tPostProcessorArgs:",jobArray[0].PostProcessorArgs)
-    print("\tPostProcessorOutputFile:",jobArray[0].PostProcessorOutputFile)
-    print("\tSplitOutput:",jobArray[0].SplitOutput)
-
-if len(toolArray) > 0:
-    print("\n\nPrinting ToolArray[0]:")
-    #print(dir(toolArray[0]))
-    print("\tLabel:",toolArray[0].Label)
-    print("\tToolNumber:",toolArray[0].ToolNumber)
-    print("\tSpindleSpeed:",toolArray[0].SpindleSpeed)
-    print("\t:SpindleDir",toolArray[0].SpindleDir)
-    print("\tHorizFeed:",toolArray[0].HorizFeed)
-    print("\tVertFeed:",toolArray[0].VertFeed)
+    lclCnt=0
     
-        
-if len(opArray) > 0:
-    print("\n\nPrinting OpArray[0]:")
-    print("\tLabel:",opArray[0].Label)
-    print(dir(opArray[0]))
-    print("\tActive:",opArray[0].Active)
-    print("\tState:",opArray[0].State)
-    print("\tClearanceHeight:",opArray[0].ClearanceHeight)
-    print("\tCycleTime:",opArray[0].CycleTime)
-    print("\tDirection:",opArray[0].Direction)
-    print("\tFinalDepth:",opArray[0].FinalDepth)
-    print("\tParents:",opArray[0].Parents)
-    print("\tCoolantMode:",opArray[0].CoolantMode)
 
-    #print(dir(opArray[0].Parents))
-    #print("\t:",opArray[0].)
-    #print("\t:",opArray[0].)
+    while lclCnt < len(jobArray):
+        
+        
+        print("\n\nPrinting JobArray[",lclCnt,"]:")
+        print(dir(jobArray[lclCnt]))
+        # Content has ALL the data
+        # print("\tContent:",jobArray[lclCnt].Content)
+        print("\tLabel:",jobArray[lclCnt].Label)
+        print("\tFixtures:",jobArray[lclCnt].Fixtures)
+        print("\tPostProcessor:",jobArray[lclCnt].PostProcessor)
+        print("\tPostProcessorArgs:",jobArray[lclCnt].PostProcessorArgs)
+        print("\tPostProcessorOutputFile:",jobArray[lclCnt].PostProcessorOutputFile)
+        print("\tSplitOutput:",jobArray[lclCnt].SplitOutput)
+        print("\tStock:",jobArray[lclCnt].Stock)
+
+        print("\tCycleTime:",jobArray[lclCnt].CycleTime)
+        print("\tDescription:",jobArray[lclCnt].Description)
+
+        #print("\tGroup:",jobArray[lclCnt].Group)
+        print("\n")
+        for elem in jobArray[lclCnt].Group:
+            print("\t\tGroup:",elem)
+
+        print("\tOperations:",jobArray[lclCnt].Operations)
+ 
+        jobArray[lclCnt].dumpContent()
+
+        
+        Ops=jobArray[lclCnt].Operations
+        opCnt=0
+        opTotCnt=len(jobArray[lclCnt].Operations.Group)
+
+        for op in jobArray[lclCnt].Operations.Group:
+            opCnt=opCnt+1
+            print("\t\tOp:",opCnt," of ",opTotCnt)
+            print("\t\t\tDir Op:",dir(op))      
+            #print("\n")
+            print("\t\t\tLabel:",op.Label)
+            print("\t\t\tActive:",op.Active)
+            print("\t\t\tBase:",op.Base)
+            print("\t\t\tClearanceHeight:",op.ClearanceHeight)
+            print("\t\t\tCoolantMode:",op.CoolantMode)
+            print("\t\t\tCycleTime:",op.CycleTime)
+            
+
+            
+            #print("\n")
+            print("\t\t\tTool Controller:")
+            print("\t\t\t\t Dir ToolController :",dir(op.ToolController))
+            print("\t\t\t\t Label:",op.ToolController.Label)
+            print("\t\t\t\t Name:",op.ToolController.Name)
+            print("\t\t\t\t FullName:",op.ToolController.FullName)
+            print("\t\t\t\t ToolNumber:",op.ToolController.ToolNumber)
+            print("\t\t\t\t SpindleSpeed:",op.ToolController.SpindleSpeed)
+            print("\t\t\t\t SpindleDir:",op.ToolController.SpindleDir)
+            print("\t\t\t\t HorizFeed:",op.ToolController.HorizFeed)
+            print("\t\t\t\t VertFeed:",op.ToolController.VertFeed)
+            print("\n")
+
+            
+            print("\t\t\tPath:")
+            print("\t\t\t\tDir Op Path:",dir(op.Path))
+
+            
+            print("\t\t\t\t BoundBox:",op.Path.BoundBox)
+            print("\t\t\t\t Center:",op.Path.Center)
+            print("\t\t\t\t Length:",op.Path.Length)
+            print("\t\t\t\t Module:",op.Path.Module)
+            print("\t\t\t\t GCode Commands:")
+            for lclCmd in op.Path.Commands:
+                print("\t\t\t\t\t\t Commands:",lclCmd.toGCode())
+            print("\n")
+
+            
+        
+        
+        lclCnt += 1
+    
+
+    print("Jobs are Done\n\n\n\n")
+    exit
+
+    print("Walking ALL the tools: (in all jobs)")
+    lclCnt=0
+    while lclCnt < len(toolArray):
+        print("\tPrinting Tool[",lclCnt,"]:")
+        #print(dir(toolArray[0]))
+        print("\t\tLabel:",toolArray[lclCnt].Label)
+        print("\t\tToolNumber:",toolArray[lclCnt].ToolNumber)
+        print("\t\tSpindleSpeed:",toolArray[lclCnt].SpindleSpeed)
+        print("\t\tSpindleDir:",toolArray[lclCnt].SpindleDir)
+        print("\t\tHorizFeed:",toolArray[lclCnt].HorizFeed)
+        print("\t\tVertFeed:",toolArray[lclCnt].VertFeed)
+        lclCnt += 1
+    
+
+
+    print("\n\n")
+    print("Walking ALL the operations: (in all jobs)")
+    lclCnt=0
+    while lclCnt <len(opArray):
+        print("\tPrinting Op[",lclCnt,"]:")
+        print("\t\tLabel:",opArray[lclCnt].Label)
+        #print(dir(opArray[lclCnt]))
+        print("\t\tActive:",opArray[lclCnt].Active)
+        print("\t\tState:",opArray[lclCnt].State)
+        print("\t\tClearanceHeight:",opArray[lclCnt].ClearanceHeight)
+        print("\t\tCycleTime:",opArray[lclCnt].CycleTime)
+        if hasattr(opArray[lclCnt] ,"Direction"):
+            print("\t\tDirection:",opArray[lclCnt].Direction)
+        else:
+            print("\t\tDirection:Undefined")
+        if hasattr(opArray[lclCnt] ,"FinalDepth"):
+            print("\t\tFinalDepth:",opArray[lclCnt].FinalDepth)
+        else:
+            print("\t\tFinalDepth:Undefined")
+        print("\t\tParents:",opArray[lclCnt].Parents)
+        print("\t\tCoolantMode:",opArray[lclCnt].CoolantMode)
+        lclCnt += 1
+
 
 
 print("============================Starting PATH stuff =============================================\n")
 
-Path.Log.setLevel(Path.Log.Level.DEBUG, Path.Log.thisModule())
-Path.Log.trackModule(Path.Log.thisModule())
-
-
-
-c = Path.Command("G0 X10 Y20 Z30")
-
-print(c)
+#Path.Log.setLevel(Path.Log.Level.DEBUG, Path.Log.thisModule())
+#Path.Log.trackModule(Path.Log.thisModule())
+#c = Path.Command("G0 X10 Y20 Z30")
+#print(c)
 
 
 print("---------------Creating lcl_linux_post ----------------------------------")
